@@ -1,0 +1,9 @@
+package dao.interfaces;
+
+import dao.implement.Order;
+
+public interface OrderDAO {
+	//SIGNATURES
+	int create(Order order);
+
+}

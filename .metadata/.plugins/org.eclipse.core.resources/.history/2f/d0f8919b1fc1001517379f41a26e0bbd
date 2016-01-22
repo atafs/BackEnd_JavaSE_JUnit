@@ -1,0 +1,15 @@
+package model;
+
+import static org.junit.Assert.*;
+import interfaces.Greeting;
+
+import org.junit.Test;
+
+public class GreetingImplTest {
+
+	@Test
+	public void greetShoulReturnValidOutput() {
+		Greeting greeting = new GreetingImpl();
+	}
+
+}

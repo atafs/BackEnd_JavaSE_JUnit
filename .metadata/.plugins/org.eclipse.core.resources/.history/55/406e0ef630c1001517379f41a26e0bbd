@@ -1,0 +1,13 @@
+package bo;
+
+import java.sql.SQLException;
+
+import dao.Order;
+
+public interface OrderBO {
+	//SIGNATURE
+	boolean placeOrder(Order order) throws BOException;
+	boolean cancelOrder(int id) throws BOException;
+	boolean deleteOrder(int id) throws BOException;
+
+}

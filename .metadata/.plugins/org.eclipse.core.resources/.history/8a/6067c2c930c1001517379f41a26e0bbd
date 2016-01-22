@@ -1,0 +1,8 @@
+package bo;
+
+import dao.Order;
+
+public interface OrderBO {
+	//SIGNATURE
+	boolean placeOrder(Order order);
+}

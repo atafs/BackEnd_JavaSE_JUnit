@@ -1,0 +1,34 @@
+package implement;
+
+import java.sql.SQLException;
+
+import dao.OrderDAO;
+import interfaces.OrderInterface;
+
+public class Order implements OrderInterface {
+
+	@Override
+	public int create(OrderDAO order) throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public OrderDAO read(int id) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int update(OrderDAO order) throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(int id) throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

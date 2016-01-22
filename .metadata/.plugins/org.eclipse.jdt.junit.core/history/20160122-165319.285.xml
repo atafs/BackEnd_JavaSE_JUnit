@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="GreetingImplTest" project="Project_002_JUnit_Mockito" tests="3" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="model.GreetingImplTest" incomplete="true">
+    <testcase name="greetShouldThrowException_For_NameIsNull" classname="model.GreetingImplTest" incomplete="true"/>
+    <testcase name="greetShouldReturnValidOutput" classname="model.GreetingImplTest" incomplete="true"/>
+    <testcase name="test1" classname="model.GreetingImplTest" incomplete="true"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,38 @@
+package model;
+
+import interfaces.Greeting;
+
+public class GreetingImpl implements Greeting{
+
+	//ATTRIBUTE
+	private String name;
+	
+	//CONSTRUCTOR
+	public GreetingImpl(String name) {
+		this.name = name;
+	}
+	
+	public GreetingImpl() {
+		this.name = null;
+	}
+	
+	//GETTERS AND SETTERS
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	//INTERFACE Greeting
+	@Override
+	public String greet(String name) {
+		return "Hello " + name;
+	}
+
+
+
+
+
+}

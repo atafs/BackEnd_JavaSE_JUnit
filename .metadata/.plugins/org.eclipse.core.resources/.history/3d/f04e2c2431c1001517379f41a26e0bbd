@@ -1,0 +1,23 @@
+package bo;
+
+import bo.exception.BOException;
+import dao.Order;
+
+public class OrderBOImpl implements OrderBO {
+
+	@Override
+	public boolean placeOrder(Order order) throws BOException {
+		return false;
+	}
+
+	@Override
+	public boolean cancelOrder(int id) throws BOException {
+		return false;
+	}
+
+	@Override
+	public boolean deleteOrder(int id) throws BOException {
+		return false;
+	}
+
+}

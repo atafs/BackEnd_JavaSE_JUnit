@@ -1,0 +1,15 @@
+package interfaces;
+
+import java.sql.SQLException;
+
+import dao.Order;
+
+//INTERFACE
+public interface OrderInterface {
+	//SIGNATURES
+	int create(Order order) throws SQLException;
+	Order read(int id) throws SQLException;
+	int update(Order order) throws SQLException;
+	int delete(int id) throws SQLException;
+	
+}

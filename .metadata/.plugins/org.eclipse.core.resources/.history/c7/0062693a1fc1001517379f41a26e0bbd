@@ -1,0 +1,12 @@
+package model;
+
+import interfaces.Greeting;
+
+public class GreetingImpl implements Greeting{
+
+	@Override
+	public String greet(String name) {
+		return null;
+	}
+
+}

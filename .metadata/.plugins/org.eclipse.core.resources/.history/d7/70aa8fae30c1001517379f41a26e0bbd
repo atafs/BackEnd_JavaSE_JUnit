@@ -1,0 +1,6 @@
+package bo;
+
+public interface OrderBO {
+	//SIGNATURE
+	boolean placeOrder(Order order);
+}

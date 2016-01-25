@@ -1,0 +1,101 @@
+package bo;
+
+import java.sql.SQLException;
+
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.*;
+
+import bo.exception.BOException;
+import dao.Order;
+import dao.OrderDAO;
+
+public class OrderBOImplTest {
+	
+	//ATTRIBUTES
+	@Mock
+	private OrderDAO dao;
+	private OrderBOImpl bo;
+	
+	@Before
+	public void setup() {
+		//MOCKITO INIT
+		MockitoAnnotations.initMocks(this);
+		
+		//INSTANTIATE
+		bo = new OrderBOImpl();
+		bo.setDao(dao);
+	}
+	
+	//ASSERT TRUE
+	@Test
+	public void placeOrder_Should_Create_An_Order() throws SQLException, BOException {
+		//EXPECTATIONS(when == trigger; 1 = true)
+		Order order = new Order();
+		when(dao.create(order)).thenReturn(new Integer(1));
+		boolean result = bo.placeOrder(order);
+		
+		//VERIFY RESULTS
+		assertTrue(result);
+		verify(dao).create(order);
+	}
+	
+	//ASSERT FALSE
+	@Test
+	public void placeOrder_Should_Not_Create_An_Order() throws SQLException, BOException {
+		//EXPECTATIONS(when == trigger; 1 = true)
+		Order order = new Order();
+		when(dao.create(order)).thenReturn(new Integer(0));
+		boolean result = bo.placeOrder(order);
+		
+		//ASSERT_VERIFY 
+		assertFalse(result);
+		verify(dao).create(order);
+	}
+	
+	//ASSERT AN EXCEPTION
+	@Test(expected = BOException.class)
+	public void placeOrder_Should_Throw_BOException() throws SQLException, BOException {
+		//EXPECTATIONS(when == trigger; 1 = true)
+		Order order = new Order();
+		when(dao.create(order)).thenThrow(SQLException.class);
+		bo.placeOrder(order);
+		
+	}
+	
+	//ASSERT MORE METHODS
+	@Test
+	public void cancelOrder_Should_Cancel_The_Order() throws SQLException, BOException {
+		//EXPECTATIONS
+		Order order = new Order();
+		when(dao.read(123)).thenReturn(order);
+		when(dao.update(order)).thenReturn(1);
+		boolean result = bo.cancelOrder(123);
+		
+		//ASSERT_VERIFY 
+		assertTrue(result);
+		verify(dao).read(123);
+		verify(dao).update(order);		
+	}
+	
+	//ASSERT NEGATIVE
+	@Test
+	public void cancelOrder_Should_Not_Cancel_The_Order() throws SQLException, BOException {
+		//EXPECTATIONS
+		Order order = new Order();
+		when(dao.read(123)).thenReturn(order);
+		when(dao.update(order)).thenReturn(0);
+		boolean result = bo.cancelOrder(123);
+		
+		//ASSERT_VERIFY 
+		assertFalse(result);
+		verify(dao).read(123);
+		verify(dao).update(order);		
+	}
+	
+	
+	
+}

@@ -1,0 +1,18 @@
+package bo;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class OrderBOImplTest {
+
+	@Mock
+	
+	
+	@Test
+	public void placeOrder_Should_Create_An_Order() {
+		OrderBOImpl bo = new OrderBOImpl();
+		bo.setDao(dao);
+	}
+
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="OrderBOImplTest" project="Project_003_JUnit_Mockito_orderService" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="bo.OrderBOImplTest" time="0.108">
+    <testcase name="placeOrder_Should_Create_An_Order" classname="bo.OrderBOImplTest" time="0.108"/>
+  </testsuite>
+</testrun>

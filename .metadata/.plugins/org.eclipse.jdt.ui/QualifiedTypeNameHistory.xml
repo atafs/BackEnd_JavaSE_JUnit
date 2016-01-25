@@ -17,4 +17,6 @@
 <fullyQualifiedTypeName name="org.mockito.Mockito"/>
 <fullyQualifiedTypeName name="bo.exception.BOException"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="calculator.Calculator"/>
+<fullyQualifiedTypeName name="calculator.CalculatorImpl"/>
 </qualifiedTypeNameHistroy>

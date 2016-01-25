@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="type.Square"/>
+<fullyQualifiedTypeName name="model.GreetingImpl"/>
+<fullyQualifiedTypeName name="interfaces.Greeting"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="junit.framework.TestCase"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="org.junit.After"/>
+<fullyQualifiedTypeName name="dao.Order"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="bo.OrderBO"/>
+<fullyQualifiedTypeName name="dao.OrderDAO"/>
+<fullyQualifiedTypeName name="bo.exception.BOException"/>
 </qualifiedTypeNameHistroy>
